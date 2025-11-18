@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ask | Ask VisiSoul</title>
+    <title> Ask VisiSoul</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/ask.css" />
-    
   </head>
   <body>
     <header class="header">
@@ -14,22 +13,29 @@
         <div class="header__logo">
           <img src="../images/logo.png" alt="Ask the brains" />
         </div>
+
         <nav class="header__nav">
-          <a href="../" class="header__link">Home</a>
-          <a href="../about/" class="header__link">About</a>
-          <a href="./" class="header__link header__link--active">Ask</a>
-          <a href="../shop/" class="header__link">Shop</a>
+          <a href="../index.html" class="header__link">Home</a>
+
+          <!-- FIXED: go to separate About page -->
+          <a href="../about/index.html" class="header__link">About</a>
+
+          <a href="./index.html" class="header__link header__link--active">Ask</a>
         </nav>
       </div>
+
       <div class="header__titles">
         <h1 class="header__title">Ask VisiSoul</h1>
         <p class="header__subtitle">
-          Type in some words to describe yourself and how you feel and get a fun and uplifting snapshot of your character!
-        </p>
+          Type in some words to describe yourself and get a fun snapshot of your character!
+      
+       </p>
       </div>
         
 
+      <div class="results__images"></div>
     </header>
+
     <main class="main">
       <section class="ask">
         <label for="question" class="ask__label">How does this image make you feel?</label>
@@ -47,19 +53,14 @@
           <p class="ask__char-count"></p>
           <div class="ask__buttons">
             <div class="buttons">
-              <button class="button button--secondary ask__button-reset">
-                Ask a new question
-              </button>
-              <button class="button button--primary ask__button-ask">
-                Ask the brains!
-              </button>
+              <button class="button button--secondary ask__button-reset">Ask a new question</button>
+              
             </div>
           </div>
         </div>
         <p class="ask__loading">Loading...</p>
       </section>
 
-<!-- FB adding the frame for images -->
       <section class="results">
         <h2 class="results__title">Results</h2>
 
@@ -72,6 +73,7 @@
         </div>
   </section>
     </main>
+
     <footer class="footer">
       <p class="footer__links">
         <a href="#" class="footer__link">Terms and Conditions</a> |
@@ -79,6 +81,7 @@
       </p>
       <p class="footer__copyright">&copy; 2025</p>
     </footer>
+
     <script type="module" defer src="../js/script.js"></script>
   </body>
 </html>
