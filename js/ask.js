@@ -28,8 +28,6 @@ class Ask {
     this.loadRandomImage();
 }
 
-  }
-
   checkInput() {
     // check submission validity
     const charsRemaining = this.maxLength - this.askInput.value.length;
@@ -79,7 +77,7 @@ class Ask {
 
 
     //Create AI prompt from user input
-    const prompt = `Based on the words "${userInput}", describe the user's personality type in a fun and insightful way.`;
+    const prompt = `Based on the user's input to how an image they are shown makes them feel , describe the user's personality type in a fun, uplifting and insightful way. The user has put "${userInput}"`;
     
     //Encode prompt for URL
     const query = encodeURIComponent(prompt);
@@ -114,12 +112,14 @@ class Ask {
     const imgRes = await fetch("http://localhost:3000/api/images");
     const imgData = await imgRes.json();
 
-    const imgContainer = this.resultsContainer.querySelector(".results__images");
+    const imgContainer = this.askContainer.querySelector(".results__images");
     imgContainer.innerHTML = ""; // clear previous image
 
     const img = document.createElement("img");
     img.src = imgData.imageUrl;
+    console.log(imgData);
     img.alt = "Black and white artistic photo";
+    console.log(imgContainer);
     imgContainer.appendChild(img);
 
     const caption = document.createElement("p");
@@ -138,10 +138,12 @@ class Ask {
     }
     
     console.log(data);
+    // Take fisrt result only
+    const slicedResults = data.results.slice(0, 1); 
 
     this.resultsList.innerHTML = "";
 
-    data.results.forEach((result) => {
+    slicedResults.forEach((result) => {
       const resultsItem = document.createElement("div");
       resultsItem.classList.add("results__item");
       

@@ -112,6 +112,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 1rem;
+  min-height: 150px;
 }
 
 /* Style the image itself */

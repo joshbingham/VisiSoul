@@ -31,18 +31,21 @@
       
        </p>
       </div>
+        
 
       <div class="results__images"></div>
     </header>
 
     <main class="main">
       <section class="ask">
-        <label for="question" class="ask__label">Ask your question</label>
+        <label for="question" class="ask__label">How does this image make you feel?</label>
+        <!-- Image container for loadRandomImage() -->
+        <div class="results__images"></div>
         <div class="ask__input-wrapper">
           <textarea
             id="question"
             class="ask__input"
-            placeholder="Enter your question here"
+            placeholder="This image makes me feel..."
           ></textarea>
           <button class="ask__button-example">Use an example</button>
         </div>
@@ -60,12 +63,15 @@
 
       <section class="results">
         <h2 class="results__title">Results</h2>
+
+        <!-- List of AI results -->
         <div class="results__list"></div>
-        <div id="results_list" class="results__list"></div>
+
+        <!-- Show more button -->
         <div class="results__show-more">
           <button class="button button--primary">Show more</button>
         </div>
-      </section>
+  </section>
     </main>
 
     <footer class="footer">
