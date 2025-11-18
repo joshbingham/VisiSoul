@@ -28,8 +28,6 @@ class Ask {
     this.loadRandomImage();
 }
 
-  }
-
   checkInput() {
     // check submission validity
     const charsRemaining = this.maxLength - this.askInput.value.length;
@@ -114,12 +112,14 @@ class Ask {
     const imgRes = await fetch("http://localhost:3000/api/images");
     const imgData = await imgRes.json();
 
-    const imgContainer = this.resultsContainer.querySelector(".results__images");
+    const imgContainer = this.askContainer.querySelector(".results__images");
     imgContainer.innerHTML = ""; // clear previous image
 
     const img = document.createElement("img");
     img.src = imgData.imageUrl;
+    console.log(imgData);
     img.alt = "Black and white artistic photo";
+    console.log(imgContainer);
     imgContainer.appendChild(img);
 
     const caption = document.createElement("p");
