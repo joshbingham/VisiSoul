@@ -77,7 +77,7 @@ class Ask {
 
 
     //Create AI prompt from user input
-    const prompt = `Based on the words "${userInput}", describe the user's personality type in a fun and insightful way.`;
+    const prompt = `Based on the user's input to how an image they are shown makes them feel , describe the user's personality type in a fun, uplifting and insightful way. The user has put "${userInput}"`;
     
     //Encode prompt for URL
     const query = encodeURIComponent(prompt);
