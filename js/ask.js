@@ -138,10 +138,12 @@ class Ask {
     }
     
     console.log(data);
+    // Take fisrt result only
+    const slicedResults = data.results.slice(0, 1); 
 
     this.resultsList.innerHTML = "";
 
-    data.results.forEach((result) => {
+    slicedResults.forEach((result) => {
       const resultsItem = document.createElement("div");
       resultsItem.classList.add("results__item");
       
