@@ -90,3 +90,9 @@
   text-align: center;
   line-height: 1.2;
 }
+
+.header__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
