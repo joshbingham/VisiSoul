@@ -61,6 +61,7 @@ class Ask {
     event.preventDefault();
     this.askInput.value = "";
     this.checkInput();
+    this.loadRandomImage();
   }
 
   async askClicked(event) {
